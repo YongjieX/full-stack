@@ -44,7 +44,7 @@ const PasswordUpdate = () => {
     setOnRequest(true);
 
     const { response, err } = await userApi.passwordUpdate(values);
-
+    console.log("userApi onUpdate response: ", response)
     setOnRequest(false);
 
     if (err) toast.error(err.message);

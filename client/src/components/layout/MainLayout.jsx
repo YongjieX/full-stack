@@ -18,6 +18,7 @@ const MainLayout = () => {
 
   useEffect(() => {
     const authUser = async () => {
+      console.log("userApi authUser response: ", response)
       const { response, err } = await userApi.getInfo();
 
       if (response) dispatch(setUser(response));
